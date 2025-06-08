@@ -31,3 +31,15 @@ def count_passed(grades):
         if grade >= 60:
             count += 1
     return count
+
+def display_student_summary(names, grades):
+    max_index = get_highest_grade(grades)
+    count = count_passed(grades)
+    avg = get_avg_grade(grades)
+    
+    print(f'\n{names[max_index]} has the highest grade: {grades[max_index]}')
+    print(f'There {"is" if count == 1 else "are"} {count} student{"s" if count != 1 else ""} passed')
+    print(f'The average grade is {avg:.2f}')
+
+
+display_student_summary(names_list, grades_list)
