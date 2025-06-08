@@ -18,3 +18,10 @@ def get_avg_grade(grades):
         total += grade
     avg = total / len(grades)
     return avg
+
+def get_highest_grade(grades):
+    max_index = 0
+    for i in range(1, len(grades)):
+        if grades[i] > grades[max_index]:
+            max_index = i
+    return max_index
