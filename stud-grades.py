@@ -11,3 +11,10 @@ for i in range(nb_of_students):
         names_list.append(name)
     else:
         print('Please input a grade below 100')
+
+def get_avg_grade(grades):
+    total = 0
+    for grade in grades:
+        total += grade
+    avg = total / len(grades)
+    return avg
