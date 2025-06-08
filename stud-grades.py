@@ -25,3 +25,9 @@ def get_highest_grade(grades):
         if grades[i] > grades[max_index]:
             max_index = i
     return max_index
+def count_passed(grades):
+    count = 0
+    for grade in grades:
+        if grade >= 60:
+            count += 1
+    return count
